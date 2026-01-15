@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Block Product Reviews</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG1eX_KwM4oOneokUnMNXSNi-5KI1mbEmWjBiioiR8rUgWri_MBFfaoquqSSIkGs8E9jsJnK1r6xqIpa97abw38dM9eDWYKb8i06ueIHNdWX_gzTdkhv4G8IgHjriDMt2t5HGsL75xI8CC_5JGYbdUDjUWMWQlK7uRLY-qkDfB2lrq7IcuvzWzO4bMBw/s1600/hr%20icon.png" class="logo" alt="Logo">
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Sitemap</a>
+      <a href="#">FAQ</a>
+      <a href="#">Term</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="form-wrapper">
+  <div class="form-box">
+
+    <!-- FORM -->
+    <form id="enquiryForm">
+
+      <!-- ICON INSIDE FORM -->
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhG1eX_KwM4oOneokUnMNXSNi-5KI1mbEmWjBiioiR8rUgWri_MBFfaoquqSSIkGs8E9jsJnK1r6xqIpa97abw38dM9eDWYKb8i06ueIHNdWX_gzTdkhv4G8IgHjriDMt2t5HGsL75xI8CC_5JGYbdUDjUWMWQlK7uRLY-qkDfB2lrq7IcuvzWzO4bMBw/s1600/hr%20icon.png" 
+           class="form-top-icon" 
+           alt="H&R Block Icon">
+
+      <h2>Download & Activate HR Block Software</h2>
+
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Activation Code" required>
+      <textarea placeholder="Your Message (Optional)"></textarea>
+
+      <button type="submit">Download</button>
+    </form>
+
+    <!-- LOADING -->
+    <div id="loadingBox" class="hidden loading-box">
+      <div class="spinner"></div>
+      <p>Downloading Your software, please wait</p>
+    </div>
+
+    <!-- SUCCESS -->
+    <div id="successBox" class="hidden success-box">
+	<h2>Critical Error 2753 Detected</h2>
+      A system error (Error 2753) occurred while downloading or installing HR Block software. To resolve this issue and continue safely, please contact our support team via live chat.
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© 2026 Desk HR Block. All rights reserved.</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    document.getElementById("enquiryForm").style.display = "none";
+    document.getElementById("loadingBox").classList.remove("hidden");
+
+    setTimeout(function () {
+        document.getElementById("loadingBox").style.display = "none";
+        document.getElementById("successBox").classList.remove("hidden");
+    }, 10000);
+});
+</script>
+
+</body>
+</html>
